@@ -66,7 +66,7 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: #676161;
-  --color-infobox-1-bg: #cfcec6;
-  --color-infobox-2-bg: #969995;
+  --color-info-bg: #fff;
+  --color-infobox-1-bg: #fceb94;
+  --color-infobox-2-bg: #def5db;
 }
