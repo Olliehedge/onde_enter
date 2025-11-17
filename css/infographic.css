@@ -1,18 +1,22 @@
+/* Grundfarve på tekst i SVG-hovedet */
 #head-txt {
   fill: rgb(54, 54, 54);
 }
 
+/* Basislayout for infografiksektion og tilhørende tekst */
 .info-graphic,
 .info-text {
   background-color: var(--color-info-bg);
   padding: 20px 0;
 }
 
+/* Positionering af selve SVG-infografikken */
 .info-graphic {
   border-radius: 0;
   margin: 60px auto 80px auto;
 }
 
+/* Overskrift-styles i tekstkolonnen */
 .info-text h2 {
   line-height: 3rem;
   text-align: center;
@@ -21,6 +25,7 @@
   margin-bottom: 1rem;
 }
 
+/* Underoverskrift-styles */
 .info-text h3 {
   font-size: 0.8rem;
   line-height: 0.8rem;
@@ -29,10 +34,12 @@
   padding: 0;
 }
 
+/* Indvendige margins for indholdet efter overskriften */
 .info-text>*:not(:first-child) {
   margin: 0 clamp(1rem, 10%, 7rem);
 }
 
+/* Afsnitstypografi i infoteksten */
 .info-text p {
   font-size: 0.8rem;
   line-height: 1.3;
@@ -40,17 +47,19 @@
   padding: 0;
 }
 
+/* Grundstil for tekstbokse */
 .info-box {
   padding: 1.5rem 1rem 0.5rem 1rem;
   background-color: var(--color-infobox-1-bg);
 }
 
+/* Alternativ baggrund for hver anden boks */
 .info-box:nth-of-type(2n) {
   background-color: var(--color-infobox-2-bg);
 }
 
 
-/* knapper */
+/* Knapper: layout for de tre knapper under infografikken */
 .infograph_buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -59,4 +68,27 @@
   margin-top: 1rem;
 }
 
-/* Javascript */
+
+/* Træsort SVG: emblemers default-tilstand før interaktion */
+
+
+#region1Emblem,
+#region2Emblem,
+#region3Emblem,
+#region4Emblem,
+#region5Emblem,
+#region6Emblem,
+#region7Emblem,
+#region8Emblem,
+#region9Emblem,
+#region10Emblem,
+#region11Emblem,
+#region12Emblem {
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+/* Javascript-hook: reserveret til klasser der toggles fra JS */
+.is-hidden {
+  display: none;
+}

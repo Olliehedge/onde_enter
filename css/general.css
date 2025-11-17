@@ -96,7 +96,8 @@ nav a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 3.6rem;
+  height: min-content;
+  padding: 0.5rem 0.5rem;
 }
 
 #logotype-wrapper>a {
@@ -118,9 +119,9 @@ header nav li a {
 }
 
 /* Pilen efter menu-tekst */
-header>nav li>a:after {
+/* header>nav li>a:after {
   content: " \2192";
-}
+} */
 
 /* Global menu hover effekt - Lav den om til det, du synes */
 nav a:hover {

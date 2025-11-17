@@ -1,0 +1,39 @@
+[popover] {
+  padding: 1rem;
+  max-height: 90vh;
+  max-width: 50ch;
+  width: 90vw;
+  justify-self: center;
+  align-self: center;
+
+  button {
+    position: sticky;
+    top: 0;
+    justify-self: end;
+  }
+
+  &:popover-open {
+    display: grid;
+  }
+
+  &::backdrop {
+    background: #0008;
+  }
+}
+
+/* Fjern eksisterende pil */
+summary::marker {
+  content: none;
+  width: min-content
+}
+
+summary::after {
+  content: "Se mere \2192";
+  font-family: system-ui;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+[open] summary::after {
+  content: "Se mindre \2190";
+}
