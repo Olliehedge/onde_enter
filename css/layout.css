@@ -43,9 +43,12 @@ footer>* {
 
 header nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+}
+
+header nav>* {
+  flex: 1;
 }
 
 nav ul {

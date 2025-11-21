@@ -49,7 +49,7 @@ responses.forEach(el =>{
   el.style.opacity = "0";
 })
 
-showInfoBoxes("udbredelse");
+showInfoBoxes();
 
 
 
