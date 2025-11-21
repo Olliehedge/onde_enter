@@ -1,22 +1,19 @@
 #webform {
-  /* background-color: var(--form-background-color); */
-  background-color: #fff;
+  background-color: var(--surface-panel);
 }
+
+
 
 #form-section,
 #form-summary {
-  /* background-color: var(--info-background-color); */
-  background-color: #fff;
+  background-color: var(--surface-panel);
   padding: 0;
 }
 
 #form-summary h2 {
   line-height: 3rem;
   text-align: center;
-  /* background-color: var(--headline-bg-color-inverted);
-  color: var(--headline-color-inverted); */
-  background-color: black;
-  color: #FFFAE2;
+  background-color: var(--surface-accent);
   padding-top: 5px;
   margin-bottom: 1rem;
 }
@@ -41,7 +38,7 @@
 }
 
 .summary-label {
-  background-color: #DBE2F5;
+  background-color: var(--surface-accent-soft);
   font-weight: 700;
   font-size: 1rem;
   border: 0px solid #ccc;
@@ -51,7 +48,7 @@
 }
 
 #form-info {
-  background-color: #fff;
+  background-color: var(--surface-panel);
 }
 
 
@@ -59,45 +56,45 @@
 
 /* CSS Starter er tilføjet */
 /* Generelle styles */
-html {
+#register main {
   font-size: 12px;
 }
 
 /*FONTS*/
-h2 {
-  color: #FFFAE2;
+#register main h2 {
+  color: var(--color-cream);
   font-size: 3rem;
   display: flex;
   flex: 1;
-  background-color: #000;
+  background-color: var(--surface-accent);
   justify-content: center;
 
 }
 
-h3 {
+#register main h3 {
   font-size: 2.6666rem;
   max-width: 40ch;
 }
 
-h4 {
+#register main h4 {
   font-size: 1.5rem;
   max-width: 50ch;
 }
 
-input {
+#register main input {
   font-family: rubik;
   border: 0px solid #ccc;
   font-size: 1.33rem;
   padding: .25rlh .7rlh;
   border-radius: 0;
   box-shadow: 0px 0px 0px;
-  background-color: #DBE2F5;
+  background-color: var(--surface-accent-soft);
 }
 
-button {
+#register main button {
   border: 0px solid #000;
-  background-color: #FC4C1E;
-  color: #FFFAE2;
+  background-color: var(--surface-accent);
+  color: var(--color-cream);
   border-radius: 0px;
   padding: .25rlh .5rlh;
   cursor: pointer;
@@ -107,32 +104,32 @@ button {
   font-weight: bold;
 }
 
-.error-message {
+#register main .error-message {
   color: darkred;
 }
 
 /* Form layout */
-form {
+#register main form {
   display: grid;
   gap: 1rlh;
   padding: 5px;
 }
 
-.form-group {
+#register main .form-group {
   display: grid;
   gap: 0.1rlh;
 }
 
-.form-row {
+#register main .form-row {
   display: flex;
   gap: 1rlh;
 }
 
-.form-group {
+#register main .form-group {
   flex: 1;
 }
 
-label:has(input) {
+#register main label:has(input) {
   display: flex;
   align-items: center;
   gap: 0.25rlh;
@@ -142,57 +139,57 @@ label:has(input) {
 
 }
 
-label {
+#register main label {
   font-weight: 700;
   font-size: 1rem;
 }
 
-legend {
+#register main legend {
   font-weight: 700;
   font-size: 1rem;
 }
 
 /* Pseudo-classes */
-:focus-visible {
+#register main :focus-visible {
   /* virker til både knapper og input-felter, select, textarea, links mm. */
   outline: 3px solid #DBE2F5;
   outline-offset: 3px;
 
 }
 
-button::after {
+#register main button::after {
   content: "→";
-  color: #FFFAE2;
+  color: var(--color-cream);
   font-weight: 500;
   padding-left: 3.5rem;
 }
 
 /* Hover-styles */
-button:hover {
-  background: #DE431B;
+#register main button:hover {
+  background: var(--surface-accent-soft);
   transition: .6s;
 }
 
 /* Active-styles (imens man klikker) */
-button:active {
+#register main button:active {
   scale: .98;
 }
 
 /* Valideringsregler */
 /* Skjul fejlmeddelelsen som standard */
-.error-message {
+#register main .error-message {
   display: none;
 }
 
-.form-group:has(:required) {
+#register main .form-group:has(:required) {
   label::after {
     content: " *";
-    color: red;
+    color: black;
   }
 
 }
 
-fieldset:has(input:required) {
+#register main fieldset:has(input:required) {
   legend::after {
     content: " *";
     color: red;
@@ -201,7 +198,7 @@ fieldset:has(input:required) {
 }
 
 /* Tilføj rød kant omkring input-feltet, hvis det er ugyldigt */
-.form-group:has(:user-invalid) {
+#register main .form-group:has(:user-invalid) {
   input {
     outline: 3px solid #f005;
     border-color: darkred;

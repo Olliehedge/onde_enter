@@ -29,6 +29,7 @@
       <ul class="menu">
         <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
         <li><a class="menuItem" href="register.html">Indberet</a></li>
+        <li><button class="menuItem" id="toggle">LIGHT/DARK MODE</button></li>
       </ul>
       <button class="burger">
         <span class="line"></span>
@@ -40,12 +41,19 @@
 
   <!-- Hovedindhold: overskrift og interaktiv infografik -->
   <main>
-    <h1>INFOGRAFIK</h1>
-    <p>Det ved vi om træerne.</p>
+
     <!-- Wrapper til SVG-infografik -->
     <section class="info-graphic">
 
+      <h1 id="infographic-h1">INFOGRAFIK</h1>
+      <p id="infographic-explainer">Det ved vi om træerne.</p>
 
+      <!-- Knapper til at skifte infografik-visning -->
+      <div class="infograph_buttons">
+        <button id="udbredelse">Udbredelse</button>
+        <button id="træsort">Træsort</button>
+        <button id="response">Response</button>
+      </div>
       <!-- SVG med regioner og emblemdata -->
       <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.04 283.58">
         <defs>
@@ -179,7 +187,7 @@
 
             .cls-19 {
               fill: #bcbec0;
-              stroke: #fff;
+              stroke: var(--color-bg);
               stroke-miterlimit: 10;
               stroke-width: .25pt;
             }
@@ -1047,16 +1055,8 @@
 
 
 
-      </svg>
 
 
-
-      <!-- Knapper til at skifte infografik-visning -->
-      <div class="infograph_buttons">
-        <button id="udbredelse">Udbredelse</button>
-        <button id="træsort">Træsort</button>
-        <button id="response">Response</button>
-      </div>
     </section>
     <!-- Tekst- og informationsbokse til infografikken -->
 
@@ -1093,7 +1093,7 @@
       </aside>
       <details id="pinetree-explainer" class="info-box">
         <summary>NÅLETRÆET</summary>
-        <aside class="info-box">Grantræerne er de mest nervøs-reaktive træmonstre i landet. De
+        <aside>Grantræerne er de mest nervøs-reaktive træmonstre i landet. De
           er
           altid på vagt, altid lyttende, altid klar til at reagere på selv de mindste påvirkninger.
           Hvor egetræet er majestætisk, er granen hyperopmærksom – en levende alarmklokke, der registrerer alt fra
@@ -1142,7 +1142,7 @@
       </details>
       <details id="heatmap-explainer" class="info-box" open>
         <summary>HEATMAP</summary>
-        <aside class="info-box">Det Nationale Center for Arboreal Adfærd (NCAA) offentliggør
+        <aside>Det Nationale Center for Arboreal Adfærd (NCAA) offentliggør
           hvert
           år et landsdækkende heatmap over træernes bevægelsesmønstre, så borgere, skoler og myndigheder kan holde sig
           orienteret om aktivitetsniveauet i lokalområderne.
@@ -1165,7 +1165,7 @@
 
       <details id="response-surveillance" class="info-box">
         <summary>OVERVÅGNING</summary>
-        <aside class="info-box">
+        <aside>
           Overvågningsresponsen består af systematisk observation af træmonstrenes bevægelser via lokale vagter,
           pedelrapporter og naturfaglige sensorer.
           Formålet er at identificere adfærdsændringer tidligt, før de udvikler sig til større hændelser.
@@ -1186,7 +1186,7 @@
 
       <details id="response-community" class="info-box">
         <summary>FÆLLESSKAB</summary>
-        <aside class="info-box">
+        <aside>
           Fællesskabsresponsen styrker relationen mellem lokalsamfundet og de omkringstående træmonstre.
           Det kan være fælles dialogmøder, naboskabsprojekter eller samarbejde om naturpasning.
           Når mennesker og træer får et fælles rum for forståelse, falder konfliktniveauet markant — og begge parter
@@ -1198,35 +1198,13 @@
 
   <!-- Fodnote med sekundær navigation -->
   <footer>
-    <nav class="some">
-      <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-      </ul>
-    </nav>
-    <nav class="another">
-      <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-      </ul>
-    </nav>
-    <nav class="yetanother">
-      <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-      </ul>
-    </nav>
+    © Ollie Hartmann
   </footer>
   <!-- Javascript til burger-menu og infografik -->
   <script src="js/burger.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/main.js"></script>
   <script src="js/instruction.js"></script>
+  <script src="js/light_dark_mode.js"></script>
 </body>
 
 </html>

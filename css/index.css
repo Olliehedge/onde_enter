@@ -24,7 +24,7 @@
 /* Fjern eksisterende pil */
 summary::marker {
   content: none;
-  width: min-content
+  width: min-content;
 }
 
 summary::after {
@@ -36,4 +36,8 @@ summary::after {
 
 [open] summary::after {
   content: "Se mindre \2190";
+}
+
+details {
+  max-width: 100ch;
 }

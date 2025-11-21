@@ -43,7 +43,7 @@
   }
   nav.active .menu {
     display: block;
-    background-color: var(--color-menu-bg);
+    background-color: var(--surface-accent);
     position: absolute;
     top: 3.6rem;
     right: 0;

@@ -6,22 +6,25 @@
 /* Basislayout for infografiksektion og tilhørende tekst */
 .info-graphic,
 .info-text {
-  background-color: var(--color-info-bg);
+  background-color: var(--surface-base);
   padding: 20px 0;
 }
 
 /* Positionering af selve SVG-infografikken */
 .info-graphic {
   border-radius: 0;
-  margin: 60px auto 80px auto;
+}
+
+.info-graphic>h1 {
+  margin: 0;
 }
 
 /* Overskrift-styles i tekstkolonnen */
 .info-text h2 {
   line-height: 3rem;
   text-align: center;
-  background-color: var(--color-headline-bg);
-  color: var(--color-headline-text-page);
+  background-color: var(--surface-accent);
+  color: var(--color-cream);
   margin-bottom: 1rem;
 }
 
@@ -50,12 +53,12 @@
 /* Grundstil for tekstbokse */
 .info-box {
   padding: 1.5rem 1rem 0.5rem 1rem;
-  background-color: var(--color-infobox-1-bg);
+  background-color: var(--surface-highlight);
 }
 
 /* Alternativ baggrund for hver anden boks */
 .info-box:nth-of-type(2n) {
-  background-color: var(--color-infobox-2-bg);
+  background-color: var(--surface-panel);
 }
 
 
@@ -65,9 +68,16 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1rem;
   margin: 0 1rem;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
+
 }
 
+#udbredelse,
+#træsort,
+#response {
+  background-color: var(--surface-accent);
+  color: var(--color-cream);
+}
 
 /* Træsort SVG: emblemers default-tilstand før interaktion */
 
@@ -91,4 +101,10 @@
 /* Javascript-hook: reserveret til klasser der toggles fra JS */
 .is-hidden {
   display: none;
+}
+
+
+#infographic-explainer {
+  background-color: var(--surface-accent-soft);
+  color: var(--color-cream);
 }
