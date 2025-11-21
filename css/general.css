@@ -1,16 +1,26 @@
 html {
   font-family: var(--font-family-sans);
-  color: var(--color-text);
+  color: var(--color-ink);
   background-color: var(--color-bg);
 }
+
 
 header {
   height: min-content;
 }
 
+#toggle.menuItem {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-size: var(--followup-text-size);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-ink);
+  border-radius: 20px;
+}
+
 #main-disclamer {
   height: 225px;
-  background-color: var(--color-head-bg);
+  background-color: var(--surface-warning);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -24,6 +34,10 @@ header {
   column-gap: 1rem;
 }
 
+#main-disclamer-content :first-child {
+  max-height: 120px;
+}
+
 main section {
   padding: 20px;
   border-radius: var(--border-radius);
@@ -32,19 +46,26 @@ main section {
 h1 {
   font-size: var(--font-h1-size);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-inverted);
+  color: var(--color-cream);
   margin: 5px 0;
   line-height: 1.3rem;
   text-align: left;
 }
 
-#instruction h1,
+
 #register h1 {
   margin: 40px 0 20px 0;
   padding: 15px 30px;
-  background-color: var(--color-head-bg);
+  background-color: var(--surface-accent);
   font-size: var(--font-h2-size);
 }
+
+#instruction h1 {
+  padding: 15px 30px;
+  background-color: var(--surface-accent);
+  font-size: var(--font-h2-size);
+}
+
 
 #instruction p {
   grid-column: 1/-1;
@@ -56,7 +77,7 @@ h1 {
 .sub {
   font-size: var(--font-sub1-size);
   font-weight: var(--font-weight-light);
-  color: var(--color-text-inverted);
+  color: var(--color-cream);
 }
 
 h2 {
@@ -74,7 +95,7 @@ main>h1 {
 /* NAVIGATION STRUCTURES */
 header>nav {
   height: 100%;
-  background-color: var(--color-menu-bg);
+  background-color: var(--surface-accent);
 }
 
 nav ul {
@@ -83,36 +104,61 @@ nav ul {
 
 a {
   font-family: var(--font-family-sans);
+  transition: filter 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
 nav a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-ink);
+}
+
+button {
+  transition: filter 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+}
+
+button:hover,
+a:hover {
+  filter: brightness(0.9);
+}
+
+summary {
+  transition: filter 0.5s ease;
+}
+
+summary:hover {
+  filter: brightness(0.9);
 }
 
 /* Måske skal du lave en ny regel for logotype-wrapper, når du har lavet din logotype */
 #logotype-wrapper {
-  background-color: var(--color-logotype-bg);
+  background-color: var(--color-ink);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: min-content;
-  padding: 0.5rem 0.5rem;
+  height: 100%;
+  padding: 0 0.5rem;
 }
 
 #logotype-wrapper>a {
-  color: var(--color-text-logotype);
+  color: var(--color-cream);
   font-size: var(--font-logotype-size);
   font-weight: var(--font-weight-medium);
   width: max-content;
   margin-left: 1rem;
+  transition: none;
+  background-color: transparent;
+}
+
+#logotype-wrapper>a:hover {
+  filter: none;
+  background-color: transparent;
 }
 
 /* Global menu */
 header nav li a {
-  margin: 1.5rem;
-  background-color: var(--color-link-bg);
-  color: var(--color-text);
+  margin: 0 1.5rem;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
   font-size: var(--followup-text-size);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-links);
@@ -125,14 +171,21 @@ header nav li a {
 
 /* Global menu hover effekt - Lav den om til det, du synes */
 nav a:hover {
-  background-color: var(--color-link-hover);
+  background-color: var(--surface-base);
 }
 
 nav a:active {
-  background-color: var(--color-link-active);
+  background-color: var(--text-muted);
 }
 
 /* FOOTER */
-footer a {
+footer {
+  display: flex;
   font-size: 0.7rem;
+  color: var(--color-cream);
+}
+
+
+button {
+  border: none;
 }
